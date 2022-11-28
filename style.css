@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Inconsolata', monospace;
+    line-height: 1;
+}
+
+.container {
+    height: 100vh;
+    background: linear-gradient( #caf0f8, #90e0ef, #00b4d8 );
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    width: 90%;
+    margin: 0 auto;
+}
+
+main {
+    text-align: center;
+}
+
+.info {
+    margin-bottom: 30px;
+}
+
+.icon {
+    max-width: 70%;
+    transition: transform 0.5s, opacity 1s;
+    margin-bottom: 30px;
+}
+
+.advise,
+.location {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.temperature {
+    font-size: 150px;
+    font-weight: bold;
+    position: relative;
+}
+
+.temperature .symbol {
+    font-size: 85px;
+    position: absolute;
+}
+
+.panel {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.5s, opacity 1s;
+}
+
+.advise::first-letter {
+    text-transform: capitalize;
+}
+
+/* Effetti */
+
+.loading .icon {
+    opacity: 0;
+    transform: translateY(30%);
+}
+
+.loading .panel {
+    opacity: 0;
+    transform: scale(0);
+}
